@@ -1,25 +1,4 @@
+@import './common';
+@import './header';
 @import './container';
-
-// Styles below contains some templates for all document and can be edited
-
-// contains some template settings for footer
-body {
-  position: relative;
-  padding-bottom: 100px;
-}
-// contains some template setups for header and input in header
-.header {
-  width: 100%;
-  height: 230px;
-  background-color: rgb(31, 31, 31);
-  display: flex;
-}
-// contains some settings for template footer
-.footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background-color: rgb(165, 165, 165);
-}
+@import './footer';
