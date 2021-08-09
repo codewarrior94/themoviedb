@@ -1,3 +1,20 @@
-<div class="header">
-    <input class="input">
-</div>
+<header class="header main-page">
+  <nav class="header__nav">
+    <a class="header__logo" href="./index.html">
+      <svg class="header__icon" width="24px" height="24px">
+        <use href="./images/sprite.svg#icon-film"></use>
+      </svg>
+      <h1 class="header__logo-text">Filmoteka</h1>
+    </a>
+    <ul class="nav__list">
+      <li class="nav__list-item"><a class="nav__list-link--current" href="./index.html">Home</a></li>
+      <li class="nav__list-item"><a class="nav__list-link" href="#">my library</a></li>
+    </ul>
+  </nav>
+  <div class="search-form">
+    <input class="search-form__input" type="text" placeholder="Поиск фильмов">
+    <a href="#"><svg class="search-form__icon" width="12px" height="12px">
+        <use href="./images/sprite.svg#icon-search"></use>
+      </svg></a>
+  </div>
+</header>
