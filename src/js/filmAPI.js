@@ -5,14 +5,14 @@ const URL = 'https://api.themoviedb.org/3'
 
 export default class FilmAPI {
     constructor() {
-        this.searchQuery = ''
-        this.page = 1 
-     }
-    
+        this.searchQuery = 'титаник'
+        this.page = 1
+    }
+
     get query() {
         return this.searchQuery
     }
-    
+
     set query(newQuery) {
         this.searchQuery = newQuery
     }
@@ -21,8 +21,9 @@ export default class FilmAPI {
         return await axios.get(`${URL}/trending/all/day?api_key=${KEY}&page=${this.page}`)
     }
 
-    async movieById(movieId) {
-        return await axios.get(`${URL}/movie/${movieId}?api_key=${KEY}&images=ojDg0PGvs6R9xYFodRct2kdI6wC.jpg`)
+
+    async searchByKeyword() {
+        return await axios.get(`${URL}/search/movie?api_key=${KEY}&page=${this.page}&query=${this.searchQuery}`)
     }
 
     // async movieSearch() {
