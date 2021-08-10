@@ -21,9 +21,11 @@ export default class FilmAPI {
         return await axios.get(`${URL}/trending/all/day?api_key=${KEY}&page=${this.page}`)
     }
 
+
     async searchByKeyword() {
         return await axios.get(`${URL}/search/movie?api_key=${KEY}&page=${this.page}&query=${this.searchQuery}`)
     }
+
     // async movieSearch() {
     //     return await axios.get(`${URL}/search/movie?api_key=${KEY}&query=${this.searchQuery}&page=${this.page}`)
     // }

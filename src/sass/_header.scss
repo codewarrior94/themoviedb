@@ -1,6 +1,230 @@
 .header {
-  width: 100%;
-  height: 230px;
-  background-color: rgb(31, 31, 31);
   display: flex;
+  height: 230px;
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
+  align-items: center;}
+
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding-bottom: 41px;
+  }
+
+.header__icon {
+  display: block;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 46px;
+  padding-left: 21px;
+  text-decoration: none;
+  @media screen and (min-width: 321px) {
+    padding-left: 71px;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 46px;
+    //padding-left: 21px;
+    @media screen and (min-width: 321px) {
+      //padding-left: 71px;
+    }
+    &-text {
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+      text-decoration: none;
+      align-items: center;
+      margin: 0;
+      padding-left: 10px;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 35px;
+      color: #ffffff;
+
+    }
+    align-items: center;
+    margin: 0;
+    padding-left: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #ffffff;
+  }
+}
+
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.56)), url(../images/Rectangle3.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/Rectangle3x2.jpg);
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56)), url(../images/Rectangle1.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+
+      background-image: url(../images/Rectangle1x2.jpg);
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56)), url(../images/Rectangle2.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+
+      background-image: url(../images/Rectangle2x2.jpg);
+
+    }
+  }
+}
+
+.button__container {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.button {
+  text-transform: uppercase;
+  min-width: 136px;
+  height: 44px;
+  background-color: rgba(0, 0, 0, 0.56);
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  padding: 0px;
+  cursor: pointer;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+  transition: background-color, 3s, ease-out, 1s;
+}
+
+.button--checked,
+.button:hover,
+.button:focus {
+  outline: none;
+  border: none;
+  background-color: #ff6b01;
+}
+
+.button:first-child {
+  margin-right: 15px;
+}
+
+.search-form {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 280px;
+  @media screen and (min-width: 768px) {
+    width: 336px;
+  }
+  &__input,
+  &__input::placeholder {
+    display: block;
+    width: 99%;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-bottom: 0.5px solid #ffffff;
+    outline: none;
+    background-color: transparent;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+  }
+  &__icon {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 4px;
+    left: 95%;
+  }
+}
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-top: 58px;
+  //padding-right: 20px;
+  margin: 0px;
+  padding-inline-start: 0px;
+
+  &-item:first-child {
+    padding-right: 39px;
+  }
+
+  &-link,
+  &-link--current {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #ffffff;
+    &--current {
+      border-bottom: 3px solid #ff6b08;
+    }
+
+  }
 }
