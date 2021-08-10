@@ -1,16 +1,29 @@
 // .header {
 //   width: 100%;
 //   height: 230px;
+<<<<<<< Updated upstream
 //   background-color: rgb(31, 31, 31);
 //   display: flex;
 // }
 .header {
+=======
+//   background-color: rgb(150, 53, 53);
+//   display: flex;
+// }
+.header {
+  display: flex;
+
+>>>>>>> Stashed changes
   height: 230px;
   margin: 0px;
   padding: 0px;
   justify-content: center;
   align-items: center;
+<<<<<<< Updated upstream
   
+=======
+
+>>>>>>> Stashed changes
   &__nav {
     display: flex;
     flex-direction: row;
@@ -30,6 +43,7 @@
     align-items: center;
     padding-top: 46px;
     padding-left: 21px;
+<<<<<<< Updated upstream
     @media screen and (min-width: 321px){
       padding-left: 71px;
     }
@@ -38,6 +52,16 @@
         display: none;
       }
       text-decoration: none;
+=======
+    text-decoration: none;
+    @media screen and (min-width: 321px) {
+      padding-left: 71px;
+    }
+    &-text {
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+>>>>>>> Stashed changes
       align-items: center;
       margin: 0;
       padding-left: 10px;
@@ -46,6 +70,7 @@
       font-weight: 500;
       font-size: 30px;
       line-height: 35px;
+<<<<<<< Updated upstream
       color: #FFFFFF;
     }
   }
@@ -55,6 +80,32 @@
       rgba(0, 0, 0, 0.56)
     ),
     url(../images/Rectangle3.jpg);
+=======
+      color: #ffffff;
+    }
+  }
+}
+// main page image
+.main-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.56);
+  background-image: url(../images/Rectangle3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/Rectangle3x2.jpg);
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-image: url(../images/Rectangle1.jpg);
+>>>>>>> Stashed changes
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -62,6 +113,7 @@
     margin-right: auto;
 
     @media screen and (min-device-pixel-ratio: 2),
+<<<<<<< Updated upstream
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
       background-image: url(../images/Rectangle3x2.jpg);
@@ -72,6 +124,15 @@
       rgba(0, 0, 0, 0.56)
     ),
     url(../images/Rectangle1.jpg);
+=======
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/Rectangle1x2.jpg);
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    background-image: url(../images/Rectangle2.jpg);
+>>>>>>> Stashed changes
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
