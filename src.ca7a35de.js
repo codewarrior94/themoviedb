@@ -67,4 +67,4 @@ module.exports=require("./lib/axios");
 },{"./filmAPI":"PNZr","./get-refs":"EGsz"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/container");
 },{"./sass/main.scss":"clu1","./js/container":"Yq98"}]},{},["Focm"], null)
-//# sourceMappingURL=/themoviedb/src.65046c7a.js.map
+//# sourceMappingURL=/themoviedb/src.ca7a35de.js.map
