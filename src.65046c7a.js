@@ -59,10 +59,12 @@ var e=require("process"),t=require("./utils"),r=require("./helpers/normalizeHead
 },{"./utils":"S1cf","./helpers/bind":"EDTP","./core/Axios":"OvAf","./core/mergeConfig":"OHvn","./defaults":"BXyq","./cancel/Cancel":"mIKj","./cancel/CancelToken":"tsWd","./cancel/isCancel":"V30M","./helpers/spread":"X8jb","./helpers/isAxiosError":"wICU"}],"dZBD":[function(require,module,exports) {
 module.exports=require("./lib/axios");
 },{"./lib/axios":"nUiQ"}],"PNZr":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var e=t(require("axios"));function t(e){return e&&e.__esModule?e:{default:e}}const r="64d8aa762e5eca1f8be6b3971b76ddad",a="https://api.themoviedb.org/3";class s{constructor(){this.searchQuery="",this.page=1}get query(){return this.searchQuery}set query(e){this.searchQuery=e}async searchTrendings(){return await e.default.get(`${a}/trending/all/day?api_key=${r}&page=${this.page}`)}resetPage(){this.page=1}}exports.default=s;
-},{"axios":"dZBD"}],"Yq98":[function(require,module,exports) {
-"use strict";var e=n(require("./filmAPI"));function n(e){return e&&e.__esModule?e:{default:e}}const r=new e.default;r.searchTrendings().then(e=>console.log(e));
-},{"./filmAPI":"PNZr"}],"Focm":[function(require,module,exports) {
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var e=t(require("axios"));function t(e){return e&&e.__esModule?e:{default:e}}const a="64d8aa762e5eca1f8be6b3971b76ddad",r="https://api.themoviedb.org/3";class s{constructor(){this.searchQuery="",this.page=1}get query(){return this.searchQuery}set query(e){this.searchQuery=e}async searchTrendings(){return await e.default.get(`${r}/trending/all/day?api_key=${a}&page=${this.page}`)}async movieById(t){return await e.default.get(`${r}/movie/${t}?api_key=${a}&images=ojDg0PGvs6R9xYFodRct2kdI6wC.jpg`)}resetPage(){this.page=1}}exports.default=s;
+},{"axios":"dZBD"}],"EGsz":[function(require,module,exports) {
+"use strict";function e(){return{searchMovie:document.querySelector(".search-movie"),infoMovie:document.querySelector(".info_movie")}}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=e;
+},{}],"Yq98":[function(require,module,exports) {
+"use strict";var e=t(require("./filmAPI")),r=t(require("./get-refs"));function t(e){return e&&e.__esModule?e:{default:e}}const n=new e.default,u=(0,r.default)();n.searchTrendings().then(e=>console.log(e));
+},{"./filmAPI":"PNZr","./get-refs":"EGsz"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/container");
 },{"./sass/main.scss":"clu1","./js/container":"Yq98"}]},{},["Focm"], null)
-//# sourceMappingURL=/themoviedb/src.7ca1e08f.js.map
+//# sourceMappingURL=/themoviedb/src.65046c7a.js.map
