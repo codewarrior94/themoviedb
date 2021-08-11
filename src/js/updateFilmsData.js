@@ -2,11 +2,11 @@ import * as data from '../templates/genres.json'
 const genres = data.genres
 
 export default function update(notUpdFilmsList) {
-    const updatedFilms = []
+    const combinedFilmGenres = []
 
     // change id => name
     for (let a = 0; a < notUpdFilmsList.length; a++) {
-        // console.log(changedNames[a])
+        console.log(notUpdFilmsList[a])
         for (let b = 0; b < notUpdFilmsList[a].genre_ids.length; b++) {
             for (let i = 0; i < notUpdFilmsList.length-1; i++) {
                 // console.log(genres[i].id)
@@ -27,7 +27,7 @@ export default function update(notUpdFilmsList) {
             ...notUpdFilmsList[i],
             genre_ids: notUpdFilmsList[i].genre_ids[0] + ", " + notUpdFilmsList[i].genre_ids[1] + ", ..."
         }
-        updatedFilms.push(film)
+        combinedFilmGenres.push(film)
         } else {
         film = {
             ...notUpdFilmsList[i],
@@ -35,13 +35,14 @@ export default function update(notUpdFilmsList) {
             }
                         
         // console.log(notUpdFilmsList[i])
-        updatedFilms.push(film)
+        combinedFilmGenres.push(film)
          }
-
+    }
+    // console.log(combinedFilmGenres)
+    const updatedFilms = {
 
     }
-
-    console.log(updatedFilms)
+    // console.log(updatedFilms)
     
     return updatedFilms
 }
