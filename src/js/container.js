@@ -1,9 +1,8 @@
 import FilmAPI from './filmAPI'
-import getRefs from './get-refs';
+import render from './render';
 
 const filmAPI = new FilmAPI;
-const refs = getRefs();
 
-filmAPI.searchTrendings().then(r => console.log(r))
+filmAPI.searchTrendings().then(r => render(r.data.results))
 
-//filmAPI.movieById(2).then(r => console.log(r))
+
