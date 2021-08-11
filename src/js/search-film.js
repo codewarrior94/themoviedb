@@ -1,5 +1,5 @@
 import FilmAPI from './filmAPI'
-import templateFilm from '../templates/test.hbs'
+import templateFilm from '../templates/filmCardInList.hbs'
 import Notiflix from 'notiflix'
 
 const filmAPI = new FilmAPI;
