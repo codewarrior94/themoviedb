@@ -23,6 +23,7 @@ export default class FilmAPI {
 
 
     async searchByKeyword() {
+        console.log(this);
         return await axios.get(`${URL}/search/movie?api_key=${KEY}&page=${this.page}&query=${this.searchQuery}`)
     }
 
