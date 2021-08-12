@@ -1,3 +1,13 @@
 :root {
   --main-font-family: 'Roboto', sans-serif;
+  --color-text-black: rgb(0, 0, 0);
+  --color-bgc-orange: rgb(255, 107, 1);
+  --color-bgc-white: rgb(255, 255, 255);
+  --color-text-grey: rgb(140, 140, 140);
+  --color-bgc-backdrop: rgb(0, 0, 0, 0.25);
+
+  --delay: 250ms;
+  --fun-transition: cubic-bezier(0.4, 0, 0.2, 1);
+  --team-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }

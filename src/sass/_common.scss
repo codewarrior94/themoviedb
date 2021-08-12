@@ -3,6 +3,8 @@ body {
   font-size: 12px;
   font-weight: 500;
 
+  color: var(--color-text-black);
+
   position: relative;
   padding-bottom: 100px;
 }
@@ -25,6 +27,10 @@ ul,
 ol {
   margin: 0;
   padding: 0;
+}
+
+li {
+  list-style-type: none;
 }
 
 .adaptiv_container {

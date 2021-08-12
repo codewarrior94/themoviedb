@@ -22,7 +22,7 @@ export default class FilmAPI {
     }
 
     async movieById(movieId) {
-        return await axios.get(`${URL}/movie/${movieId}?api_key=${KEY}&images=ojDg0PGvs6R9xYFodRct2kdI6wC.jpg`)
+        return await axios.get(`${URL}/movie/${movieId}?api_key=${KEY}&language=en-US`)
     }
 
     // async movieSearch() {
