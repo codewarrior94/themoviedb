@@ -44,5 +44,5 @@ export default function update(notUpdFilmsList) {
     }
     // console.log(updatedFilms)
     
-    return updatedFilms
+    return combinedFilmGenres
 }
