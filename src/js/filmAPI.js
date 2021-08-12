@@ -22,7 +22,10 @@ export default class FilmAPI {
         return await axios.get(`${URL}/trending/all/day?api_key=${KEY}&page=${this.page}`)
     }
 
-
+    async movieById(movieId) {
+        return await axios.get(`${URL}/movie/${movieId}?api_key=${KEY}&language=en-US`)
+    }
+  
     async searchByKeyword() {
         Notiflix.Loading.hourglass()
         return await axios.get(`${URL}/search/movie?api_key=${KEY}&page=${this.page}&query=${this.searchQuery}`)
