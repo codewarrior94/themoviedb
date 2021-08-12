@@ -1,3 +1,4 @@
+{{#each this}}
 <li class="film-card">
     <img class="film-poster" data-id={{id}} src="https://image.tmdb.org/t/p/w300{{poster_path}}">
     <p class="film-title">{{original_title}}</p>
@@ -6,3 +7,4 @@
         <span class="hilm-year"> | {{release_date}}</span>
     </div>
 </li>
+{{/each}}

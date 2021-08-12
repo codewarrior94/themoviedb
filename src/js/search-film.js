@@ -4,41 +4,33 @@ import Notiflix from 'notiflix'
 
 const filmAPI = new FilmAPI;
 const debounce = require('lodash.debounce')
-const DEBOUNCE_DELAY = 300;
+const DEBOUNCE_DELAY = 500;
 
 
 
 const refs = {
+  searchForm: document.getElementById('search-form'),
   searchFilm: document.querySelector('.search-form__input'),
-  renderCardFilms: document.querySelector('.adaptiv_container'),
+  renderCardFilms: document.querySelector('.film-list'),
 }
 
 refs.searchFilm.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY))
 
 async function onSearch(e) {
   e.preventDefault()
-
-  const inputValue = e.target.value
-  console.log(inputValue);
   clearPicturesMarkup()
 
   filmAPI.resetPage()
   filmAPI.query = e.target.value
 
-  // filmAPI.searchByKeyword(inputValue)
-  //   .then(r => console.log(r))
-  //   .catch(error => console.error())
-
   try {
-    const dataArray = await filmAPI.searchByKeyword();
+    const films = await filmAPI.searchByKeyword();
 
-    if (filmAPI.query === '' || dataArray.results.length === 0) {
-      // clearPicturesMarkup();
-      // refs.loadMoreBtn.classList.add('is-hidden');
+    if (filmAPI.query === '' || films.data.results.length === 0) {
       Notiflix.Notify.failure('Search result failed. Enter the correct movie title and search again');
     } else {
-      // refs.loadMoreBtn.classList.remove('is-hidden');
-      filmsMarkup(dataArray.results);
+      filmsMarkup(films.data.results);
+      Notiflix.Loading.remove();
     }
   } catch (error) {
     console.log(error);
