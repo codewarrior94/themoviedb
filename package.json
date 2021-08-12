@@ -28,6 +28,8 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "lodash.debounce": "^4.0.8",
+    "notiflix": "^3.0.1",
     "simplelightbox": "^2.8.0"
   }
 }

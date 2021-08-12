@@ -1,4 +1,51 @@
 body {
+  font-family: var(--main-font-family);
+  font-size: 12px;
+  font-weight: 500;
+
   position: relative;
   padding-bottom: 100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.adaptiv_container {
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media screen and (min-width: 320px) {
+    width: 320px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding: 0 75px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 1024px;
+    padding: 0 71px;
+  }
 }
