@@ -1,5 +1,5 @@
 import FilmAPI from './filmAPI'
-import templateFilms from '../templates/filmCardInList.hbs'
+import render from './render';
 import Notiflix from 'notiflix'
 
 const filmAPI = new FilmAPI;
@@ -18,7 +18,7 @@ refs.searchFilm.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY))
 
 async function onSearch(e) {
   e.preventDefault()
-  clearPicturesMarkup()
+  Notiflix.Loading.remove();
 
   filmAPI.resetPage()
   filmAPI.query = e.target.value
@@ -27,20 +27,14 @@ async function onSearch(e) {
     const films = await filmAPI.searchByKeyword();
 
     if (filmAPI.query === '' || films.data.results.length === 0) {
+      Notiflix.Loading.remove();
       Notiflix.Notify.failure('Search result failed. Enter the correct movie title and search again');
     } else {
-      filmsMarkup(films.data.results);
+      render(films.data.results);
       Notiflix.Loading.remove();
     }
-  } catch (error) {
-    console.log(error);
   }
-}
-
-function filmsMarkup(collection) {
-  refs.renderCardFilms.insertAdjacentHTML('beforeend', templateFilms(collection))
-}
-
-function clearPicturesMarkup() {
-  refs.renderCardFilms.innerHTML = ''
+  catch (error) {
+    Notiflix.Loading.remove();
+  }
 }
