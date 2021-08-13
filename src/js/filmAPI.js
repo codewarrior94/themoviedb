@@ -23,6 +23,7 @@ export default class FilmAPI {
     }
 
     async movieById(movieId) {
+        Notiflix.Loading.hourglass()
         return await axios.get(`${URL}/movie/${movieId}?api_key=${KEY}&language=en-US`)
     }
   
