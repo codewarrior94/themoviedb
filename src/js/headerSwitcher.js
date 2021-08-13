@@ -1,6 +1,5 @@
 import headerLibrary from '../templates/headerLibrary.hbs';
-const wrapper = document.querySelector('.main-wrapper');
-const homeBtn = document.getElementById("homeBtn");
+const wrapper = document.querySelector('.header');
 const libraryBtn = document.getElementById("libraryBtn");
 
 libraryBtn.addEventListener('click', onLibraryRedirect);
