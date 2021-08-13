@@ -1,0 +1,322 @@
+.header {
+  display: flex;
+  width: 100%;
+  height: 230px;
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 41px;
+
+  @media screen and (min-width:768px) {
+    padding-left: 71px;
+    padding-right: 71px;
+  }
+}
+
+.header__icon {
+  display: block;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 46px;
+  text-decoration: none;
+
+  &-text {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+    align-items: center;
+    margin: 0;
+    padding-left: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: var(--color-bgc-white);
+  }
+}
+
+// main page image
+.adaptiv-container {
+  width: 100%;
+  height: 100%;
+  padding: 0px, 71px;
+
+  @media screen and (max-width:320px) {
+    padding: 0px, 20px;
+  }
+}
+
+.main-page__wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.56);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+    url(../images/Rectangle3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/Rectangle3x2.jpg);
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/Rectangle1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/Rectangle1x2.jpg);
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/Rectangle2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/Rectangle2x2.jpg);
+    }
+  }
+}
+// library image
+.library-wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/library3.jpg);
+  background-color: rgba(0, 0, 0, 0.56);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/library3x2.jpg);
+  }
+  @media screen and (min-width: 1024px) {
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/library1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/library1x2.jpg);
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/library2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/library2x2.jpg);
+    }
+  }
+}
+
+.button__container {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.button {
+  text-transform: uppercase;
+  min-width: 136px;
+  height: 44px;
+  background-color: rgba(0, 0, 0, 0.56);
+  border-radius: 5px;
+  border: 1px solid var(--color-bgc-white);;
+  padding: 0px;
+  cursor: pointer;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-bgc-white);;
+  transition: background-color, 3s, ease-out, 1s;
+}
+
+.button--checked,
+.button:hover,
+.button:focus {
+  outline: none;
+  border: none;
+  background-color: var(--color-bgc-orange);
+  box-shadow: (0px 8px 43px rgba(255, 107, 1, 0.6));
+}
+
+.button:first-child {
+  margin-right: 15px;
+}
+
+.search-form {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 280px;
+  @media screen and (min-width: 768px){
+    width: 336px;
+  }
+
+  &__input,
+  &__input::placeholder {
+    display: block;
+    width: 99%;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    border:0;
+    border-bottom: 0.5px solid var(--color-bgc-white);;
+    outline: none;
+    background-color: transparent;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--color-bgc-white);;
+  }
+  &__icon {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 4px;
+    left: 95%;
+  }
+}
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-top: 58px;
+  margin: 0px;
+  padding-inline-start: 0px;
+
+  &-item:first-child {
+    padding-right: 39px;
+  }
+
+  &-link,
+  &-link--current {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--color-bgc-white);
+  }
+  &-link--current {
+    border-bottom: 3px solid var(--color-bgc-orange);
+  }
+}
+.logo__icon{
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/film.svg);
+}
