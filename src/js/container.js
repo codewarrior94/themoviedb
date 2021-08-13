@@ -3,4 +3,7 @@ import render from './render';
 
 const filmAPI = new FilmAPI;
 
-filmAPI.searchTrendings().then(r => render(r.data.results))
+filmAPI.searchTrendings().then(r => {
+    render(r.data.results)
+    // console.log(r.data.results)
+})

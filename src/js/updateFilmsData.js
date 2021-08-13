@@ -22,6 +22,13 @@ export default function update(notUpdFilmsList) {
         if (notUpdFilm.genre_ids.length === 0) {
             notUpdFilm.genre_ids = ["None"]
         }
+        if (notUpdFilm.poster_path) {
+            notUpdFilm.poster_path = `https://image.tmdb.org/t/p/w300${notUpdFilm.poster_path}`
+        }
+        if (!notUpdFilm.poster_path) {
+            notUpdFilm.poster_path = "https://iconsplace.com/wp-content/uploads/_icons/b7b7b7/256/png/film-2-icon-16-256.png"
+            notUpdFilm.poster_class = "template-poster"
+        }
     }
     
     // change number of genres if there are more than 2
