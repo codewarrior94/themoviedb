@@ -5,7 +5,7 @@ export default function getRefs() {
         //modal info film
         infoFilmContainer: document.querySelector('.info_film_container'),
         infoFilmIsOpen: document.querySelector('.backdrop'),
-        closeInfoBtn: document.querySelector('.js-close-info'),
+        closeInfoBtn: document.querySelector('.icon'),
         bodyEl: document.querySelector('body'),
         mainContainer: document.querySelector('.container'),
         //modal info film

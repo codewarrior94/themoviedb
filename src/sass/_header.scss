@@ -1,15 +1,11 @@
 .header {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 230px;
   margin: 0px;
-  padding: 0px;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-  @media screen and (min-width: 768px) {
-    margin-bottom: 60px;
-  }
 }
 
 .header__nav {
@@ -18,7 +14,14 @@
   justify-content: space-between;
   align-items: center;
   margin: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-bottom: 41px;
+
+  @media screen and (min-width:768px) {
+    padding-left: 71px;
+    padding-right: 71px;
+  }
 }
 
 .header__icon {
@@ -31,11 +34,8 @@
   justify-content: space-around;
   align-items: center;
   padding-top: 46px;
-  padding-left: 21px;
   text-decoration: none;
-  @media screen and (min-width: 321px) {
-    padding-left: 71px;
-  }
+
   &-text {
     @media screen and (max-width: 767px) {
       display: none;
@@ -48,16 +48,31 @@
     font-weight: 500;
     font-size: 30px;
     line-height: 35px;
-    color: var(--color-bgc-white);;
+    color: var(--color-bgc-white);
   }
 }
 
 // main page image
-.adaptiv_container {
+.adaptiv-container {
+  width: 100%;
+  height: 100%;
+  padding: 0px, 71px;
+
+  @media screen and (max-width:320px) {
+    padding: 0px, 20px;
+  }
+}
+
+.main-page__wrapper {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.56);
-  background-image: url(../images/Rectangle3.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+    url(../images/Rectangle3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -67,11 +82,21 @@
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: url(../images/Rectangle3x2.jpg);
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/Rectangle3x2.jpg);
   }
 
   @media screen and (min-width: 1024px) {
-    background-image: url(../images/Rectangle1.jpg);
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/Rectangle1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -81,11 +106,21 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(../images/Rectangle1x2.jpg);
+      background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/Rectangle1x2.jpg);
     }
   }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
-    background-image: url(../images/Rectangle2.jpg);
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/Rectangle2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -95,7 +130,12 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(../images/Rectangle2x2.jpg);
+      background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/Rectangle2x2.jpg);
     }
   }
 }
@@ -103,7 +143,12 @@
 .library-wrapper {
   width: 100%;
   height: 100%;
-  background-image: url(../images/library3.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/library3.jpg);
   background-color: rgba(0, 0, 0, 0.56);
   background-repeat: no-repeat;
   background-size: cover;
@@ -114,10 +159,20 @@
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: url(../images/library3x2.jpg);
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/library3x2.jpg);
   }
   @media screen and (min-width: 1024px) {
-    background-image: url(../images/library1.jpg);
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/library1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -127,11 +182,21 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(../images/library1x2.jpg);
+      background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/library1x2.jpg);
     }
   }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
-    background-image: url(../images/library2.jpg);
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/library2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -141,7 +206,12 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(../images/library2x2.jpg);
+      background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(0, 0, 0, 0.56)
+      ),
+      url(../images/library2x2.jpg);
     }
   }
 }
@@ -177,6 +247,7 @@
   outline: none;
   border: none;
   background-color: var(--color-bgc-orange);
+  box-shadow: (0px 8px 43px rgba(255, 107, 1, 0.6));
 }
 
 .button:first-child {
@@ -223,12 +294,8 @@
   flex-direction: row;
   list-style: none;
   padding-top: 58px;
-  padding-right: 20px;
   margin: 0px;
   padding-inline-start: 0px;
-  @media screen and (min-width: 768px){
-    padding-right: 70px;
-  }
 
   &-item:first-child {
     padding-right: 39px;

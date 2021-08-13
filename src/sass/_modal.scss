@@ -132,6 +132,7 @@
   font-size: 12px;
   line-height: 1.17;
   width: 132px;
+  
 
   @media screen and (min-width: 768px) {
     width: 156px;
@@ -152,10 +153,12 @@
 }
 
 .description-info-about {
+  
   line-height: 1.67;
 }
 
 ul.description-info {
+  flex-wrap: wrap;
   display: flex;
 }
 
