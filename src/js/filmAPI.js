@@ -23,7 +23,17 @@ export default class FilmAPI {
     }
 
     async movieById(movieId) {
-        return await axios.get(`${URL}/movie/${movieId}?api_key=${KEY}&language=en-US`)
+        try {
+            Notiflix.Loading.hourglass()
+            return await axios.get(`${URL}/movie/${movieId}?api_key=${KEY}&language=en-US`);
+        }
+        catch (err) {
+            console.error("Error response:");
+            console.error(err.response.data);    // ***
+            console.error(err.response.status);  // ***
+            console.error(err.response.headers); // ***
+            Notiflix.Loading.remove();
+        }
     }
   
     async searchByKeyword() {

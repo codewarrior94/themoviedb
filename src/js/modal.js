@@ -1,10 +1,7 @@
 import getRefs from './get-refs';
-import onInfoFilmAPI from './infoFilm';
-
+import onInfoFilmAPI  from './infoFilm';
 
 const refs = getRefs();
-
-
 
 refs.closeInfoBtn.addEventListener('click', onCloseInfoFilm);
 function onCloseInfoFilm(ev) {
