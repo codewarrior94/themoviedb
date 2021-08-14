@@ -220,7 +220,10 @@ ul.description-info {
   padding: 1px 10px;
 }
 
+.icon {
+  stroke: currentColor;
+}
+
 svg.icon:hover {
   color: var(--color-bgc-orange);
-  width: 40px;
 }
