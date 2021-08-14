@@ -216,3 +216,8 @@ ul.description-info {
   border-radius: 5px;
   padding: 1px 10px;
 }
+
+svg.icon:hover {
+  color: var(--color-bgc-orange);
+  width: 40px;
+}
