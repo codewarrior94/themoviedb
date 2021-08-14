@@ -4,42 +4,34 @@ import onInfoFilmAPI from './infoFilm';
 
 const refs = getRefs();
 
-function onCloseInfoFilm(ev){
+
+
+refs.closeInfoBtn.addEventListener('click', onCloseInfoFilm);
+function onCloseInfoFilm(ev) {
+    ev.stopPropagation();
     onToggleClass()
     refs.infoFilmContainer.innerHTML = '';
-  document.removeEventListener('keydown', onEventKey);
-  refs.infoFilmIsOpen.removeEventListener('click', onCloseInfoFilm);
-  refs.closeInfoBtn.removeEventListener('click', onCloseInfoFilm);
-    const idFilm = ev.target;
+    document.removeEventListener('keydown', onEventKey);
 }
 
 refs.mainContainer.addEventListener('click', onOpenInfoFilm);
 function onOpenInfoFilm(ev) {
-  const idFilm = ev.target.dataset.id;
+    const idFilm = ev.target.dataset.id;
     if (idFilm > 0) {
-        onToggleClass()
         onInfoFilmAPI(idFilm);
-      document.addEventListener('keydown', onEventKey)
-      console.log(refs.closeInfoBtn);
-      refs.infoFilmIsOpen.addEventListener('click', onCloseInfoFilm);
-      refs.closeInfoBtn.addEventListener('click', onCloseInfoFilm);
+        document.addEventListener('keydown', onEventKey)
     }
 }
 
-function onToggleClass() {
-  refs.infoFilmIsOpen.classList.toggle('backdrop--is-hidden');
-  refs.bodyEl.classList.toggle('toggle_scroll');
+export default function onToggleClass() {
+    refs.infoFilmIsOpen.classList.toggle('backdrop--is-hidden');
+    refs.bodyEl.classList.toggle('toggle_scroll');
 }
 
 function onEventKey(ev) {
-  console.log(ev.code);
     if (ev.code === 'Escape') {
-      onCloseInfoFilm();
-      onToggleClass()
+        onCloseInfoFilm(ev);
     }
-    // else if (ev.code === 'ArrowLeft') {
-      
-    // } else if (ev.code === 'ArrowRight') {
-      
-    // }
 }
+
+refs.infoFilmIsOpen.addEventListener('click', onCloseInfoFilm);
