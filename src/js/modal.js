@@ -9,9 +9,13 @@ const refs = getRefs();
 refs.closeInfoBtn.addEventListener('click', onCloseInfoFilm);
 function onCloseInfoFilm(ev) {
     ev.stopPropagation();
-    onToggleClass()
-    refs.infoFilmContainer.innerHTML = '';
-    document.removeEventListener('keydown', onEventKey);
+    if (ev.code === 'Escape'
+            || ev.target.classList.contains('backdrop')
+            || ev.target.classList.contains('icon')) {
+        onToggleClass()
+        refs.infoFilmContainer.innerHTML = '';
+        document.removeEventListener('keydown', onEventKey);
+    }
 }
 
 refs.mainContainer.addEventListener('click', onOpenInfoFilm);
