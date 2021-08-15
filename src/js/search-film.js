@@ -30,7 +30,7 @@ async function onSearch(e) {
 
     if (filmAPI.query === '' || films.data.results.length === 0) {
 
-      clearContainer()
+      // clearContainer()
 
       Notiflix.Loading.remove();
       Notiflix.Notify.failure('Search result failed. Enter the correct movie title and search again');
