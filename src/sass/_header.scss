@@ -17,7 +17,7 @@
   padding-right: 20px;
   padding-bottom: 41px;
 
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     padding-left: 71px;
     padding-right: 71px;
   }
@@ -57,7 +57,7 @@
   height: 100%;
   padding: 0px, 71px;
 
-  @media screen and (max-width:320px) {
+  @media screen and (max-width: 320px) {
     padding: 0px, 20px;
   }
 }
@@ -66,11 +66,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.56);
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(0, 0, 0, 0.56)
-      ),
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.56)),
     url(../images/Rectangle3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -81,20 +77,12 @@
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(0, 0, 0, 0.56)
-      ),
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.56)),
       url(../images/Rectangle3x2.jpg);
   }
 
   @media screen and (min-width: 1024px) {
-    background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(0, 0, 0, 0.56)
-      ),
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.56)),
       url(../images/Rectangle1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -105,20 +93,12 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/Rectangle1x2.jpg);
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.56)),
+        url(../images/Rectangle1x2.jpg);
     }
   }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
-    background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(0, 0, 0, 0.56)
-      ),
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.56)),
       url(../images/Rectangle2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -129,12 +109,8 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/Rectangle2x2.jpg);
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.56)),
+        url(../images/Rectangle2x2.jpg);
     }
   }
 }
@@ -142,12 +118,8 @@
 .library-wrapper {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/library3.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.56)),
+    url(../images/library3.jpg);
   background-color: rgba(0, 0, 0, 0.56);
   background-repeat: no-repeat;
   background-size: cover;
@@ -158,19 +130,11 @@
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(0, 0, 0, 0.56)
-      ),
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.56)),
       url(../images/library3x2.jpg);
   }
   @media screen and (min-width: 1024px) {
-    background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(0, 0, 0, 0.56)
-      ),
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.56)),
       url(../images/library1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -181,20 +145,12 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/library1x2.jpg);
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.56)),
+        url(../images/library1x2.jpg);
     }
   }
   @media screen and (min-width: 768px) and (max-width: 1023px) {
-    background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(0, 0, 0, 0.56)
-      ),
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.56)),
       url(../images/library2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -205,12 +161,8 @@
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(0, 0, 0, 0.56)
-      ),
-      url(../images/library2x2.jpg);
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(0, 0, 0, 0.56)),
+        url(../images/library2x2.jpg);
     }
   }
 }
@@ -227,7 +179,7 @@
   height: 44px;
   background-color: rgba(0, 0, 0, 0.56);
   border-radius: 5px;
-  border: 1px solid var(--color-bgc-white);;
+  border: 1px solid var(--color-bgc-white);
   padding: 0px;
   cursor: pointer;
 
@@ -236,7 +188,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
-  color: var(--color-bgc-white);;
+  color: var(--color-bgc-white);
   transition: background-color, 3s, ease-out, 1s;
 }
 
@@ -258,8 +210,11 @@
   position: relative;
   margin: auto;
   width: 280px;
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     width: 336px;
+  }
+  &__input {
+    padding-left: 10px;
   }
 
   &__input,
@@ -269,8 +224,8 @@
     height: 20px;
     justify-content: center;
     align-items: center;
-    border:0;
-    border-bottom: 0.5px solid var(--color-bgc-white);;
+    border: 0;
+    border-bottom: 0.5px solid var(--color-bgc-white);
     outline: none;
     background-color: transparent;
     font-family: Roboto;
@@ -278,7 +233,7 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
-    color: var(--color-bgc-white);;
+    color: var(--color-bgc-white);
   }
   &__icon {
     position: absolute;
@@ -286,6 +241,7 @@
     height: 12px;
     top: 4px;
     left: 95%;
+    cursor: none;
   }
 }
 .nav__list {
@@ -315,7 +271,7 @@
     border-bottom: 3px solid var(--color-bgc-orange);
   }
 }
-.logo__icon{
+.logo__icon {
   width: 24px;
   height: 24px;
   background-image: url(../images/film.svg);

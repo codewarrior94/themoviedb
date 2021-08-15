@@ -27,6 +27,7 @@ async function onSearch(e) {
     const films = await filmAPI.searchByKeyword();
 
     if (filmAPI.query === '' || films.data.results.length === 0) {
+      refs.renderCardFilms.innerHTML = ''
       Notiflix.Loading.remove();
       Notiflix.Notify.failure('Search result failed. Enter the correct movie title and search again');
     } else {
