@@ -1,8 +1,14 @@
 import axios from 'axios'
 import Notiflix from 'notiflix';
 
+import getRefs from './get-refs';
+import detailFilm from '../templates/detail-film.hbs';
+import onAddRemovDataBtn from '../js/btnAddRemov';
+
 const KEY = '64d8aa762e5eca1f8be6b3971b76ddad'
 const URL = 'https://api.themoviedb.org/3'
+
+const refs = getRefs();
 
 export default class FilmAPI {
     constructor() {
@@ -28,6 +34,7 @@ export default class FilmAPI {
             return await axios.get(`${URL}/movie/${movieId}?api_key=${KEY}&language=en-US`);
         }
         catch (err) {
+            this.renderModal(err)
             console.error("Error response:");
             console.error(err.response.data);    // ***
             console.error(err.response.status);  // ***
@@ -51,6 +58,16 @@ export default class FilmAPI {
 
     resetPage() {
         this.page = 1
+    }
+
+    renderModal(film) {
+        const data = film.data ? film.data : film;
+        refs.infoFilmIsOpen.classList.toggle('backdrop--is-hidden');
+        refs.bodyEl.classList.toggle('toggle_scroll');
+        refs.infoFilmContainer.insertAdjacentHTML('beforeend', detailFilm(data));
+        const btnAddWatched = document.querySelector('.info-btn-container');
+        btnAddWatched.addEventListener('click', onAddRemovDataBtn);
+        Notiflix.Loading.remove();
     }
 }
 
