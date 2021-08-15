@@ -1,6 +1,7 @@
 import FilmAPI from './filmAPI'
-import render from './render';
+import { render, clearContainer } from './render';
 import Notiflix from 'notiflix'
+
 
 const filmAPI = new FilmAPI;
 const debounce = require('lodash.debounce')
@@ -25,10 +26,15 @@ async function onSearch(e) {
 
   try {
     const films = await filmAPI.searchByKeyword();
+    console.log(films);
 
     if (filmAPI.query === '' || films.data.results.length === 0) {
+
+      clearContainer()
+
       Notiflix.Loading.remove();
       Notiflix.Notify.failure('Search result failed. Enter the correct movie title and search again');
+
     } else {
       render(films.data.results);
       Notiflix.Loading.remove();
