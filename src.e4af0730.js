@@ -104,4 +104,4 @@ const e={LIGHT:"light-theme",DARK:"dark-theme"},t={checkbox:document.getElementB
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/container"),require("./js/infoFilm"),require("./js/modal"),require("./js/headerSwitcher"),require("./js/search-film"),require("./js/localStorageMovies"),require("./js/themeswitcher");
 },{"./sass/main.scss":"clu1","./js/container":"Yq98","./js/infoFilm":"kIDH","./js/modal":"RSqK","./js/headerSwitcher":"UKEW","./js/search-film":"abVP","./js/localStorageMovies":"LI6t","./js/themeswitcher":"xEYp"}]},{},["Focm"], null)
-//# sourceMappingURL=/themoviedb/src.5e4d453e.js.map
+//# sourceMappingURL=/themoviedb/src.e4af0730.js.map
