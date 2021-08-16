@@ -1,4 +1,4 @@
-import FilmAPI from './filmAPI'
+import FilmAPI from './filmAPI';
 
 const filmAPI = new FilmAPI;
 

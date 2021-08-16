@@ -16,7 +16,7 @@ export default class LocalStorage{
         const idFilm = elem.dataset.id
         if (elem.classList.contains("btn-add-watched")) {
             this.addInLosalStorage('watched');
-            this.dataBtn(elem, "delete watced", "btn-del-watched", "btn-add-watched");
+            this.dataBtn(elem, "delete watched", "btn-del-watched", "btn-add-watched");
         }
         else if (elem.classList.contains("btn-del-watched")) {
             this.delInLosalStorage('watched', idFilm);
