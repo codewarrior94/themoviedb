@@ -5,5 +5,5 @@ const filmAPI = new FilmAPI;
 
 filmAPI.searchTrendings().then(r => {
     render(r.data.results)
-    // console.log(r.data.results)
+    //console.log(r.data.results)
 })

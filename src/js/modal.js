@@ -1,7 +1,9 @@
 import getRefs from './get-refs';
-import onInfoFilmAPI  from './infoFilm';
+import onInfoFilmAPI from './infoFilm';
+import LocalStorage from './localStorageMovies'
 
 const refs = getRefs();
+const localStg = new LocalStorage;
 
 refs.closeInfoBtn.addEventListener('click', onCloseInfoFilm);
 function onCloseInfoFilm(ev) {
@@ -12,14 +14,18 @@ function onCloseInfoFilm(ev) {
         onToggleClass()
         refs.infoFilmContainer.innerHTML = '';
         document.removeEventListener('keydown', onEventKey);
+        localStg.removeEvent();
     }
 }
 
 refs.mainContainer.addEventListener('click', onOpenInfoFilm);
 function onOpenInfoFilm(ev) {
-    const idFilm = ev.target.dataset.id;
-    if (idFilm > 0) {
-        onInfoFilmAPI(idFilm);
+    const film = ev.target.dataset.film;
+    if (film) {
+        console.log(film);
+        const idFilm = JSON.parse(film).id;
+        
+        onInfoFilmAPI(idFilm, film);
         document.addEventListener('keydown', onEventKey)
     }
 }
