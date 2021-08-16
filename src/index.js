@@ -8,4 +8,4 @@ import './js/headerSwitcher';
 import './js/search-film';
 import './js/localStorageMovies';
 import './js/themeswitcher';
-
+import './js/up2top';
