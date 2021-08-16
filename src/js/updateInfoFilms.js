@@ -34,6 +34,7 @@ function disabledBtn() {
         el.setAttribute('disabled', true);
         el.classList.add('disabled');
     })
+    
 }
 
 export { updateInfoFilms, updateDelInfoFilms, disabledBtn }
