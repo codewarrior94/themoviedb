@@ -7,7 +7,6 @@ export default function getRefs() {
         infoFilmIsOpen: document.querySelector('.backdrop'),
         closeInfoBtn: document.querySelector('.icon'),
         bodyEl: document.querySelector('body'),
-        mainContainer: document.querySelector('.container'),
-        //modal info film
+        mainContainer: document.querySelector('.container')
     };
 }
