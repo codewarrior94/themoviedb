@@ -7,6 +7,7 @@ import './js/container';
 import './js/headerSwitcher';
 import './js/search-film';
 import './js/localStorageMovies';
+import './js/localStorageExport'
 import './js/themeswitcher';
 import './js/renderModal';
 import './js/up2top';
