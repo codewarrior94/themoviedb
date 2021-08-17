@@ -15,14 +15,14 @@ export default function renderModal(film={}, filmDataLoS='') {
     const errMesage = err ? "The resource you requested has been deleted!" : "The resource you requested could not be found!";
     refs.infoFilmIsOpen.classList.toggle('backdrop--is-hidden');
     refs.bodyEl.classList.toggle('toggle_scroll');
-    console.log(filmDataLS);
+
     if (err || filmDataLS.adult === '') {
         data = updateDelInfoFilms(filmDataLS)
     }
     data = updateInfoFilms(data)
-    console.log(data);
+
     refs.infoFilmContainer.insertAdjacentHTML('beforeend', detailFilm(data));
-    console.log(filmDataLS.adult, filmDataLS);
+
     if (err  || filmDataLS.adult === '') {
         disabledBtn();
         Notiflix.Report.failure('Oops, something went wrong!!!',

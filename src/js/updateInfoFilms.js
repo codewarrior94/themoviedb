@@ -1,5 +1,5 @@
 function updateInfoFilms(dataFilm) {
-    console.log(dataFilm)
+
     for (const key in dataFilm) {
         if (!dataFilm[key] && ((key === 'title') || (key === 'original_title') || (key === 'overview') || (key === 'release_date'))) {
             dataFilm[key] = 'None';
@@ -27,13 +27,13 @@ function updateDelInfoFilms(dataFilm) {
     for (let i = 0; i < dataFilm.genres.length; i++){
         dataFilm.genres[i] = {name: dataFilm.genres[i]}
     }
-    console.log(dataFilm)
+
     return dataFilm
 }
 
 function disabledBtn() {
     const btn = document.querySelectorAll('.info-btn-container button');
-    console.log(btn);
+
     btn.forEach(el => {
         el.setAttribute('disabled', true);
         el.classList.add('disabled');
