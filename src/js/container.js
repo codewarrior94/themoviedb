@@ -17,7 +17,7 @@ filmAPI.searchTrendings().then(r => {
   loadFirstBtn.addEventListener('click', onLoadFirst);
   loadLastBtn.addEventListener('click', onLoadLast);
   render(r.data.results);
-  console.log(r.data)
+  // console.log(r.data)
 })
 
 let currentPage = parseInt(localStorage.getItem("current-page"), 10);
@@ -30,8 +30,8 @@ async function onLoadNext() {
     localStorage.setItem("current-page", `${nextPage.data.page}`);
     currentPage = parseInt(localStorage.getItem("current-page"), 10);
     render(nextPage.data.results);
-    console.log("currentPage " + currentPage);
-    console.log("totalPages " + totalPages);
+    // console.log("currentPage " + currentPage);
+    // console.log("totalPages " + totalPages);
     Notiflix.Loading.remove();
 }
 
