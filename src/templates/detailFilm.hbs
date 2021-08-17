@@ -1,0 +1,42 @@
+<div class="info_film">
+    <img class="info-film-poster" src="{{poster_path}}" alt=""
+        onError="this.src='https://iconsplace.com/wp-content/uploads/_icons/b7b7b7/256/png/film-2-icon-16-256.png'">
+    <div class="info">
+        <h2 class="original-title uppercase">{{title}}</h2>
+        <ul class="info-list">
+            <li class="item-info">
+                <span class="titles-info">Vote / Votes</span>
+                <span class="description-info"><span class="description-info-orang">{{vote_average}}</span> /
+                    {{vote_count}}</span>
+            </li>
+            <li class="item-info">
+                <span class="titles-info">Popularity</span>
+                <span class="description-info">{{popularity}}</span>
+            </li>
+            <li class="item-info">
+                <span class="titles-info">Original Title</span>
+                <span class="description-info uppercase">{{original_title}}</span>
+            </li>
+            <li class="item-info">
+                <span class="titles-info">Genre</span>
+                <div class="description-info">
+                    {{#each this.genres}}
+                    <span class="description-info-item">{{this.name}}</span>&nbsp
+                    {{/each}}
+                </div>
+            </li>
+            <li class="item-info-about">
+                <p class="titles-info-about uppercase">About</p>
+                <p class="description-info-about">{{overview}}</p>
+            </li>
+        </ul>
+        <div class="info-btn-container">
+            <button class="btn-add btn-add-watched watched uppercase" data-id="{{id}}">
+                add to Watched
+            </button>
+            <button class="btn-add btn-add-queue queue uppercase" data-id="{{id}}">
+                add to queue
+            </button>
+        </div>
+    </div>
+</div>

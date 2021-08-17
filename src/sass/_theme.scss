@@ -25,7 +25,7 @@ body.dark-theme {
 }
 
 .css-info-film-container.light-theme {
-  background-color: white;
+  background-color: var(--color-bgc-white);
 }
 
 .css-info-film-container.dark-theme {
@@ -52,6 +52,12 @@ body.dark-theme {
       color: var(--color-bgc-orange);
       border: 1px solid var(--color-bgc-orange);
     }
+  }
+
+  .item-info,
+  .item-info-about,
+  .original-title {
+    color: white;
   }
 }
 
