@@ -112,4 +112,4 @@ const e=document.querySelector(".arrowup");document.addEventListener("DOMContent
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/container"),require("./js/infoFilm"),require("./js/modal"),require("./js/headerSwitcher"),require("./js/searchFilm"),require("./js/localStorageMovies"),require("./js/localStorageExport"),require("./js/themeswitcher"),require("./js/renderModal"),require("./js/up2top");
 },{"./sass/main.scss":"clu1","./js/container":"Yq98","./js/infoFilm":"kIDH","./js/modal":"RSqK","./js/headerSwitcher":"UKEW","./js/searchFilm":"Td8I","./js/localStorageMovies":"LI6t","./js/localStorageExport":"gDnW","./js/themeswitcher":"xEYp","./js/renderModal":"TqZv","./js/up2top":"wYfV"}]},{},["Focm"], null)
-//# sourceMappingURL=/themoviedb/src.d8bb3693.js.map
+//# sourceMappingURL=/themoviedb/src.b11f896b.js.map
