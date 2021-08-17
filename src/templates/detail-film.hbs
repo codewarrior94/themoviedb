@@ -1,5 +1,5 @@
 <div class="info_film">
-        <img class="info-film-poster" src="{{poster_path}}" alt="" onError="this.src='https://iconsplace.com/wp-content/uploads/_icons/b7b7b7/256/png/film-2-icon-16-256.png'">
+        <img class="info-film-poster" src="https://image.tmdb.org/t/p/w400{{poster_path}}" alt="" onError="this.src='https://upload.wikimedia.org/wikipedia/commons/a/a1/Out_Of_Poster.jpg'">
         <div class="info">
             <h2 class="original-title uppercase">{{title}}</h2>
             <ul class="info-list">
@@ -29,10 +29,10 @@
                 </li>
             </ul>
             <div class="info-btn-container">
-                <button class="btn-add btn-add-watched watched uppercase" data-id="{{id}}">
+                <button class="btn-add btn-add-watched uppercase">
                     add to Watched
                 </button>
-                <button class="btn-add btn-add-queue queue uppercase" data-id="{{id}}">
+                <button class="btn-add btn-add-queue uppercase">
                     add to queue
                 </button>
             </div>

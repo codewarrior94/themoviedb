@@ -7,6 +7,7 @@
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 10000;
 
   width: 100vw;
   height: 100vh;
@@ -14,7 +15,7 @@
   background-color: var(--color-bgc-backdrop);
 
   opacity: 1;
-  z-index: 100;
+  z-index: 10001;
 
   overflow-y: scroll;
 }
@@ -40,13 +41,11 @@
   padding: 48px 20px 41px 20px;
 
   @media screen and (min-width: 768px) {
-    top: 231px;
     max-width: 618px;
     padding: 42px 30px 40px 28px;
   }
 
   @media screen and (min-width: 1024px) {
-    top: 100px;
     max-width: 882px;
     padding: 50px 30px 40px 30px;
   }
@@ -133,6 +132,7 @@
   font-size: 12px;
   line-height: 1.17;
   width: 132px;
+  
 
   @media screen and (min-width: 768px) {
     width: 156px;
@@ -153,6 +153,7 @@
 }
 
 .description-info-about {
+  
   line-height: 1.67;
 }
 
@@ -212,11 +213,6 @@ ul.description-info {
   border: 1px solid var(--color-bgc-white);
 }
 
-.disabled {
-  pointer-events: none;
-  background-color: var(--color-text-grey);
-}
-
 .description-info-orang {
   color: var(--color-bgc-white);
   background-color: var(--color-bgc-orange);
@@ -230,8 +226,4 @@ ul.description-info {
 
 svg.icon:hover {
   color: var(--color-bgc-orange);
-}
-
-[id^='NotiflixReportWrap'] > div[class*='-content'].nx-with-animation.nx-fade {
-  z-index: 10002;
 }
