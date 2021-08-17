@@ -1,5 +1,5 @@
 import getRefs from './get-refs';
-import detailFilm from '../templates/detail-film.hbs';
+import detailFilm from '../templates/detailFilm.hbs';
 import LocalStorage from './localStorageMovies';
 import Notiflix from 'notiflix';
 import { updateInfoFilms, updateDelInfoFilms, disabledBtn } from './updateInfoFilms';
@@ -20,6 +20,7 @@ export default function renderModal(film={}, filmDataLoS='') {
         data = updateDelInfoFilms(filmDataLS)
     }
     data = updateInfoFilms(data)
+    console.log(data);
     refs.infoFilmContainer.insertAdjacentHTML('beforeend', detailFilm(data));
     console.log(filmDataLS.adult, filmDataLS);
     if (err  || filmDataLS.adult === '') {
