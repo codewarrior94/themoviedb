@@ -1,0 +1,21 @@
+.modal-list {
+  // display: flex;
+}
+.modal-item {
+  // flex-wrap: wrap;
+}
+.socials {
+  display: flex;
+}
+.socials__item {
+  margin-right: 10px;
+}
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socials__icon {
+  width: 20px;
+  height: 20px;
+}
