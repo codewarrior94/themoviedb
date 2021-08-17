@@ -25,7 +25,7 @@ export default class FilmAPI {
     }
 
     async searchTrendings() {
-        return await axios.get(`${URL}/trending/all/day?api_key=${KEY}&page=${this.page}`)
+        return await axios.get(`${URL}/trending/movie/day?api_key=${KEY}&page=${this.page}`)
     }
 
     async movieById(movieId) {
@@ -68,6 +68,25 @@ export default class FilmAPI {
         const btnAddWatched = document.querySelector('.info-btn-container');
         btnAddWatched.addEventListener('click', onAddRemovDataBtn);
         Notiflix.Loading.remove();
+    }
+    async searchByKeywordPagination(page) {
+      Notiflix.Loading.hourglass()
+      this.page = page;
+      return await axios.get(`${URL}/search/movie?api_key=${KEY}&page=${this.page}&query=${this.searchQuery}`)
+    }
+  
+    async searchTrendingsPagination(page) {
+      Notiflix.Loading.hourglass()
+      this.page = page;
+      return await axios.get(`${URL}/trending/movie/day?api_key=${KEY}&page=${this.page}`)
+    }
+  
+    nextPage() {
+      this.page += 1
+    }
+    
+    prevPage() {
+      this.page -= 1
     }
 }
 
