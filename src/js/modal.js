@@ -23,7 +23,6 @@ refs.mainContainer.addEventListener('click', onOpenInfoFilm);
 function onOpenInfoFilm(ev) {
     const film = ev.target.dataset.film;
     if (film) {
-        console.log(film);
         const idFilm = JSON.parse(film).id;
         onInfoFilmAPI(idFilm, film);
         document.addEventListener('keydown', onEventKey)
