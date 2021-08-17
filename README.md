@@ -15,7 +15,6 @@
 |  Скрам-мастер |   [twasileva][scrum-master]			      |
 |  Разработчик  |   [anton41k][anton41k]				        |
 |  Разработчик  |   [identityapproved][identityapproved]|
-|  Разработчик  |   [RedOne-DXB][RedOne-DXB]			      |
 |  Разработчик  |   [Sabinka1207][Sabinka1207]			    |
 |  Разработчик  |   [Vi663][Vi663]						          |
 
