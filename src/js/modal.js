@@ -1,9 +1,11 @@
 import getRefs from './get-refs';
 import onInfoFilmAPI from './infoFilm';
-import LocalStorage from './localStorageMovies'
+import LocalStorage from './localStorageMovies';
+import Notiflix from 'notiflix';
 
 const refs = getRefs();
 const localStg = new LocalStorage;
+
 
 refs.closeInfoBtn.addEventListener('click', onCloseInfoFilm);
 function onCloseInfoFilm(ev) {
@@ -24,7 +26,6 @@ function onOpenInfoFilm(ev) {
     if (film) {
         console.log(film);
         const idFilm = JSON.parse(film).id;
-        
         onInfoFilmAPI(idFilm, film);
         document.addEventListener('keydown', onEventKey)
     }
