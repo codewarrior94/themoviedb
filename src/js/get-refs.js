@@ -9,5 +9,7 @@ export default function getRefs() {
         bodyEl: document.querySelector('body'),
         mainContainer: document.querySelector('.container'),
         //modal info film
+        myLibBtn: document.getElementById("libraryBtn"),
+        filmList: document.querySelector(".film-list")
     };
 }

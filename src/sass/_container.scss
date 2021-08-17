@@ -17,7 +17,7 @@
 
   @media screen and (max-width: 767px) {
     width: 280px;
-    grid-template-columns: repeat(auto-fill, minmax(294px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-gap: 20px;
   }
 
@@ -45,10 +45,6 @@
   height: 398px;
   object-fit: cover;
   border-radius: 5px;
-
-  @media screen and (min-width: 1024px) {
-    width: 274px;
-  }
 }
 
 .film-poster:hover {
@@ -75,27 +71,3 @@
   font-size: 12px;
   line-height: 16px;
 }
-
-// @media screen and (max-width: 767px) {
-
-// }
-
-// @media screen and (min-width: 768px) and (max-width: 1023px) {
-
-// }
-
-// @media screen and (min-width: 1024px) {
-
-// }
-
-// .input {
-//   margin-left: 50px;
-//   margin-top: auto;
-//   margin-bottom: auto;
-
-//   border: none;
-//   outline: none;
-//   border-bottom: 2px solid rgb(165, 165, 165);
-//   background-color: transparent;
-//   color: rgb(165, 165, 165);
-// }
