@@ -1,13 +1,13 @@
-import FilmAPI from './filmAPI';
+import FilmAPI from './filmAPI'
 
 const filmAPI = new FilmAPI;
 
 
-export default function onInfoFilmAPI(id, filmDataLS) {
-    filmAPI.movieById(id, filmDataLS).then(film => {
-       // console.log(film, filmDataLS);
+export default function onInfoFilmAPI(id) {
+    filmAPI.movieById(id).then(film => {
+        console.log(film);
         if (film) {
-            filmAPI.renderModal(film, filmDataLS)
+            filmAPI.renderModal(film)
         }
     })
 }
