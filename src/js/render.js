@@ -7,5 +7,4 @@ export default function render(notUpdFilmsList) {
   const updFilmsList = update(notUpdFilmsList)
   const dataToRender = updFilmsList.map(filmCardInList).join(" ")
   filmList.innerHTML = dataToRender;
-  //console.log(updFilmsList)
 }
