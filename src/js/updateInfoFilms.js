@@ -33,6 +33,7 @@ function updateDelInfoFilms(dataFilm) {
 
 function disabledBtn() {
     const btn = document.querySelectorAll('.info-btn-container button');
+    console.log(btn);
     btn.forEach(el => {
         el.setAttribute('disabled', true);
         el.classList.add('disabled');
