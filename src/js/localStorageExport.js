@@ -15,23 +15,31 @@ function onMyLibClick() {
 }
 
 function showWathched() {
-    let watchedListLength = JSON.parse(localStorage.getItem("watched")).length
-    if (watchedListLength) {
-        const watchedFilmList = JSON.parse(localStorage.getItem("watched"))
-        getRefs().filmList.innerHTML = watchedFilmList.map(filmCardInList).join("")
+    let watchedList = localStorage.getItem("watched")
+    if (watchedList) {
+        if (JSON.parse(watchedList).length) {
+            const watchedFilmList = JSON.parse(localStorage.getItem("watched"))
+            getRefs().filmList.innerHTML = watchedFilmList.map(filmCardInList).join("")
+        } else {
+            showMessageEmpty()
+        }
     } else {
         showMessageEmpty()
     }
 }
 
 function showQueue() {
-    let queueListLength = JSON.parse(localStorage.getItem("queue")).length
-    if (queueListLength) {
-        const queueFilmList = JSON.parse(localStorage.getItem("queue"))
-        getRefs().filmList.innerHTML = queueFilmList.map(filmCardInList).join("")  
+    let queueList = localStorage.getItem("queue")
+    if (queueList) {
+        if (JSON.parse(queueList).length) {
+            const queueFilmList = JSON.parse(localStorage.getItem("queue"))
+            getRefs().filmList.innerHTML = queueFilmList.map(filmCardInList).join("") 
+        } else {
+            showMessageEmpty()
+        }
     } else {
-        showMessageEmpty()     
-    }
+        showMessageEmpty()
+    }    
 }
 
 function showMessageEmpty() {
