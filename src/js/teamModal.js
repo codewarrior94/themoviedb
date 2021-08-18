@@ -6,8 +6,8 @@ const modalList = document.querySelector('.modal-list')
 
 function renderTeamModal() {
   const dataRender = team.map(teamTemplate).join(' ')
-  console.log(dataRender);
   modalList.innerHTML = dataRender
 }
 
 renderTeamModal()
+

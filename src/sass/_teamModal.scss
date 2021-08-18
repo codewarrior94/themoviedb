@@ -4,6 +4,12 @@
 .modal-item {
   // flex-wrap: wrap;
 }
+.modal-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .socials {
   display: flex;
 }
@@ -14,8 +20,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: 1px solid tomato;
 }
 .socials__icon {
   width: 20px;
   height: 20px;
+  fill: currentColor;
 }
