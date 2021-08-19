@@ -1,5 +1,6 @@
 import axios from 'axios'
 import Notiflix from 'notiflix';
+import renderModal from './renderModal';
 
 const KEY = '64d8aa762e5eca1f8be6b3971b76ddad';
 const URL = 'https://api.themoviedb.org/3';
@@ -8,7 +9,7 @@ export default class FilmAPI {
     constructor() {
         this.searchQuery = 'титаник'
         this.page = 1;
-        this.renderModal = this.renderModal;
+        this.renderModal = renderModal;
     }
 
     get query() {

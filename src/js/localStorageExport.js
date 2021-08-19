@@ -1,12 +1,24 @@
 import filmCardInList from "../templates/filmCardInList.hbs";
-import getRefs from "./get-refs"
+import getRefs from "./get-refs";
+//Vika
+import headerLibrary from '../templates/headerLibrary.hbs';
+//Vika
 
 let watchedBtn = ''
 let queueBtn = ''
+let isWatched = false;
+let isQueue = false;
+//Vika
+const wrapper = document.querySelector('.header');
+//Vika
 
 getRefs().myLibBtn.addEventListener("click", onMyLibClick)
 
-function onMyLibClick() {
+function onMyLibClick(ev) {
+    //Vika
+    ev.preventDefault();
+    wrapper.innerHTML = headerLibrary();
+    //Vika
     watchedBtn = document.querySelector(".btn-watched")
     watchedBtn.addEventListener("click", onShowWathched)
     queueBtn = document.querySelector(".btn-queue")
@@ -23,6 +35,8 @@ function onShowWathched(ev) {
 }
 
 function showWathched() {
+    isWatched = true;
+    isQueue = false;
     let watchedList = localStorage.getItem("watched");
     if (watchedList) {
         if (JSON.parse(watchedList).length) {
@@ -40,17 +54,23 @@ function onShowQueue(ev) {
     if (!ev.target.classList.contains('button--checked')) {
         onToggleClass(queueBtn, 'button--checked', watchedBtn)
     }
+    showQueue()    
+}
+
+function showQueue() {
+    isWatched = false;
+    isQueue = true;
     let queueList = localStorage.getItem("queue")
     if (queueList) {
         if (JSON.parse(queueList).length) {
             const queueFilmList = JSON.parse(localStorage.getItem("queue"))
-            getRefs().filmList.innerHTML = queueFilmList.map(filmCardInList).join("") 
+            getRefs().filmList.innerHTML = queueFilmList.map(filmCardInList).join("")
         } else {
             showMessageEmpty()
         }
     } else {
         showMessageEmpty()
-    }    
+    }
 }
 
 function showMessageEmpty() {
@@ -69,3 +89,4 @@ function onToggleClass(elNew = '', cls= '', elOld = '' ) {
         elOld.classList.toggle(cls);
     }
 }
+export{showWathched, showQueue, isWatched, isQueue}
