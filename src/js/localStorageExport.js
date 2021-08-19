@@ -8,14 +8,22 @@ getRefs().myLibBtn.addEventListener("click", onMyLibClick)
 
 function onMyLibClick() {
     watchedBtn = document.querySelector(".btn-watched")
-    watchedBtn.addEventListener("click", showWathched)
+    watchedBtn.addEventListener("click", onShowWathched)
     queueBtn = document.querySelector(".btn-queue")
-    queueBtn.addEventListener("click", showQueue)
+    queueBtn.addEventListener("click", onShowQueue)
+    onToggleClass(watchedBtn, 'button--checked')
+    showWathched()
+}
+
+function onShowWathched(ev) {
+    if (!ev.target.classList.contains('button--checked')) {
+        onToggleClass(watchedBtn, 'button--checked', queueBtn)
+    }
     showWathched()
 }
 
 function showWathched() {
-    let watchedList = localStorage.getItem("watched")
+    let watchedList = localStorage.getItem("watched");
     if (watchedList) {
         if (JSON.parse(watchedList).length) {
             const watchedFilmList = JSON.parse(localStorage.getItem("watched"))
@@ -28,7 +36,10 @@ function showWathched() {
     }
 }
 
-function showQueue() {
+function onShowQueue(ev) {
+    if (!ev.target.classList.contains('button--checked')) {
+        onToggleClass(queueBtn, 'button--checked', watchedBtn)
+    }
     let queueList = localStorage.getItem("queue")
     if (queueList) {
         if (JSON.parse(queueList).length) {
@@ -50,4 +61,11 @@ function showMessageEmpty() {
         <p class="empty-film-list--row">Oooopss.... </p>
     </div>`
     getRefs().filmList.innerHTML = dataToShow
+}
+
+function onToggleClass(elNew = '', cls= '', elOld = '' ) {
+    elNew.classList.toggle(cls);
+    if (elOld) {
+        elOld.classList.toggle(cls);
+    }
 }
