@@ -21,6 +21,7 @@ export default class FilmAPI {
     }
 
     async searchTrendings() {
+        Notiflix.Loading.hourglass()
         return await axios.get(`${URL}/trending/movie/day?api_key=${KEY}&page=${this.page}`)
     }
 
