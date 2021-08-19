@@ -20,7 +20,8 @@ export default function renderModal(film={}, filmDataLoS='') {
         data = updateDelInfoFilms(filmDataLS)
     }
     data = updateInfoFilms(data)
-
+    console.log(data);
+    console.log(filmDataLoS);
     refs.infoFilmContainer.insertAdjacentHTML('beforeend', detailFilm(data));
 
     if (err  || filmDataLS.adult === '') {

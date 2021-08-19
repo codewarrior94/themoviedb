@@ -9,6 +9,7 @@ const loadNextBtn = document.querySelector('.next');
 const loadPrevBtn = document.querySelector('.prev');
 const loadLastBtn = document.querySelector('.last');
 const loadFirstBtn = document.querySelector('.first');
+const loadCurrentBtn = document.querySelector('.current');
 
 
 
@@ -19,8 +20,6 @@ const refs = {
 }
 
 refs.searchFilm.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY))
-// loadPrevBtn.disabled = true;
-// loadNextBtn.disabled = true;
 
 async function onSearch(e) {
   e.preventDefault()
@@ -42,10 +41,13 @@ async function onSearch(e) {
       localStorage.setItem("total-pages", `${films.data.total_pages}`)
       localStorage.setItem("current-page", `${films.data.page}`)
       loadLastBtn.textContent = films.data.total_pages;
-      loadNextBtn.addEventListener('click', onLoadNext);
-      loadPrevBtn.addEventListener('click', onLoadPrev);
-      loadFirstBtn.addEventListener('click', onLoadFirst);
-      loadLastBtn.addEventListener('click', onLoadLast);
+      loadNextBtn.addEventListener('click', onLoadNextSearch);
+      loadPrevBtn.addEventListener('click', onLoadPrevSearch);
+      loadFirstBtn.addEventListener('click', onLoadFirstSearch);
+      loadLastBtn.addEventListener('click', onLoadLastSearch);
+      loadPrevBtn.classList.remove('disabled');
+      loadNextBtn.classList.remove('disabled');
+      getCurrentPage()
     }
   }
   catch (error) {
@@ -53,64 +55,64 @@ async function onSearch(e) {
   }
 }
 
-let currentPage = parseInt(localStorage.getItem("current-page"), 10);
-let totalPages = parseInt(localStorage.getItem("total-pages"), 10);
+let currentPage = 1;
+let totalPages = 1000;
 
-// if (`${currentPage}` > 1 || `${currentPage}` <= `${totalPages}`) {
-//   loadPrevBtn.style.disabled = false;
-// } else {
-//   loadPrevBtn.style.disabled = true;
-// }
+function getCurrentPage() {
+  currentPage = parseInt(localStorage.getItem("current-page"), 10);
+  totalPages = parseInt(localStorage.getItem("total-pages"), 10);
+  loadCurrentBtn.textContent = currentPage;
+  if (currentPage === totalPages) {
+    loadFirstBtn.classList.add('disabled');
+    loadLastBtn.classList.add('disabled');
+    loadNextBtn.classList.add('disabled');
+    loadPrevBtn.classList.add('disabled');
+  } else if (currentPage === 1) {
+    loadPrevBtn.classList.add('disabled');
+    console.log(totalPages);
+  } return currentPage;
+}
 
-// if (`${currentPage}` >= 1 && `${currentPage}` < `${totalPages}`) {
-//   loadNextBtn.disabled = false;
-// } else {
-//   loadNextBtn.disabled = true;
-// }
-
-async function onLoadNext() {
+async function onLoadNextSearch() {
   Notiflix.Loading.remove();
   filmAPI.nextPage();
-
   const nextPage = await filmAPI.searchByKeyword();
   localStorage.setItem("current-page", `${nextPage.data.page}`);
-  currentPage = parseInt(localStorage.getItem("current-page"), 10);
+  getCurrentPage();
   render(nextPage.data.results);
-  console.log("currentPage " + currentPage);
-  console.log("totalPages " + totalPages);
+  loadPrevBtn.classList.remove('disabled');
   Notiflix.Loading.remove();
 }
-async function onLoadPrev() {
+
+
+async function onLoadPrevSearch() {
   Notiflix.Loading.remove();
   filmAPI.prevPage();
-
   const prevPage = await filmAPI.searchByKeyword();
   localStorage.setItem("current-page", `${prevPage.data.page}`);
-  currentPage = parseInt(localStorage.getItem("current-page"), 10);
+  getCurrentPage();
   render(prevPage.data.results);
-  console.log("currentPage " + currentPage);
-  console.log("totalPages " + totalPages);
+  loadNextBtn.classList.remove('disabled');
   Notiflix.Loading.remove();
 }
 
-async function onLoadFirst() {
+async function onLoadFirstSearch() {
   Notiflix.Loading.remove();
   filmAPI.resetPage();
-
   const firstPage = await filmAPI.searchByKeyword();
   localStorage.setItem("current-page", `${firstPage.data.page}`);
-  currentPage = parseInt(localStorage.getItem("current-page"), 10);
+  getCurrentPage();
   render(firstPage.data.results);
   Notiflix.Loading.remove();
 }
 
-async function onLoadLast() {
+async function onLoadLastSearch() {
   Notiflix.Loading.remove();
-  currentPage = parseInt(localStorage.getItem("total-pages"), 10);
-  const lastPage = await filmAPI.searchByKeywordPagination(currentPage);
-
-  localStorage.setItem("current-page", `${currentPage}`);
-  
+  localStorage.setItem("current-page", `${totalPages}`);
+  getCurrentPage()
+  loadPrevBtn.classList.remove('disabled');
+  totalPages = parseInt(localStorage.getItem("total-pages"), 10);
+  const lastPage = await filmAPI.searchByKeywordPagination(totalPages);
   render(lastPage.data.results);
   Notiflix.Loading.remove();
 }

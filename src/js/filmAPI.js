@@ -1,16 +1,14 @@
 import axios from 'axios'
 import Notiflix from 'notiflix';
 
-import renderModal from './renderModal';
-
-const KEY = '64d8aa762e5eca1f8be6b3971b76ddad'
-const URL = 'https://api.themoviedb.org/3'
+const KEY = '64d8aa762e5eca1f8be6b3971b76ddad';
+const URL = 'https://api.themoviedb.org/3';
 
 export default class FilmAPI {
     constructor() {
         this.searchQuery = 'титаник'
         this.page = 1;
-        this.renderModal = renderModal;
+        this.renderModal = this.renderModal;
     }
 
     get query() {
@@ -25,13 +23,13 @@ export default class FilmAPI {
         return await axios.get(`${URL}/trending/movie/day?api_key=${KEY}&page=${this.page}`)
     }
 
-    async movieById(movieId, filmDataLS) {
+    async movieById(movieId) {
         try {
             Notiflix.Loading.hourglass()
             return await axios.get(`${URL}/movie/${movieId}?api_key=${KEY}&language=en-US`);
         }
         catch (err) {
-            this.renderModal(err, filmDataLS)
+            this.renderModal(err)
             Notiflix.Loading.remove();
         }
     }
