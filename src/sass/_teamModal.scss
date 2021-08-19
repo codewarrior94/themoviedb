@@ -1,18 +1,19 @@
 /* TEAM */
 .modal {
-  max-width: 1200px;
+  max-width: 800px;
 }
 .section__heading {
-  margin-bottom: 50px;
+  margin-top: 15px;
+  margin-bottom: 30px;
 
   font-weight: 700;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 1.17;
   text-align: center;
 }
 
 .team__thumb {
-  height: 300px;
+  height: 240px;
 }
 
 img {
@@ -22,9 +23,11 @@ img {
   object-fit: cover;
 }
 .team {
-  display: flex;
-  flex-wrap: wrap;
   margin-right: -30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .team__item {
   text-align: center;
@@ -43,13 +46,13 @@ img {
 }
 
 .team__heading {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-weight: 500;
 }
 
 .team__text {
   color: rgb(117, 117, 117);
-  margin-bottom: 16px;
+  margin-bottom: 5px;
 }
 
 /*SOCIALS-NET*/
@@ -67,8 +70,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 44px;
-  height: 44px;
+  width: 33px;
+  height: 33px;
   background-color: var(--color-bgc-white);
   fill: var(--color-text-black);
   border-radius: 50%;
@@ -82,6 +85,6 @@ img {
 }
 
 .socials__icon {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
 }
