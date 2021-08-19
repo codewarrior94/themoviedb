@@ -70,7 +70,7 @@ body.dark-theme {
   }
 
   .load-button:hover {
-    color: black;
+    color: var(--color-bgc-white);
     background-color: var(--color-bgc-orange);
     fill: var(--color-bgc-white);
     outline: var(--color-bgc-white);
