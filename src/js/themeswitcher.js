@@ -7,12 +7,14 @@ const refs = {
    checkbox: document.getElementById('theme-switch-toggle'),
    body: document.querySelector('body'),
    footer: document.querySelector('.footer'),
-   movieWrap: document.querySelector('.css-info-film-container')
+  movieWrap: document.querySelector('.css-info-film-container'),
+  pageWrapper: document.querySelector('.page__wrapper'),
 };
 
 refs.body.classList.add(THEME.LIGHT);
 refs.footer.classList.add(THEME.LIGHT);
 refs.movieWrap.classList.add(THEME.LIGHT);
+refs.pageWrapper.classList.add(THEME.LIGHT);
 
 
 refs.checkbox.addEventListener('change', onClickCheckbox);
@@ -27,6 +29,9 @@ function onClickCheckbox(e) {
   refs.movieWrap.classList.toggle(THEME.LIGHT);
   refs.movieWrap.classList.toggle(THEME.DARK);
 
+  refs.pageWrapper.classList.toggle(THEME.LIGHT);
+  refs.pageWrapper.classList.toggle(THEME.DARK);
+
   if (e.currentTarget.checked) {
     localStorage.setItem('theme', THEME.DARK);
   } else {
@@ -40,4 +45,5 @@ if (saveTheme === THEME.DARK) {
   refs.body.classList.add(THEME.DARK);
   refs.footer.classList.add(THEME.DARK);
   refs.movieWrap.classList.toggle(THEME.DARK);
+  refs.pageWrapper.classList.toggle(THEME.DARK);
 }
