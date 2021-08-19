@@ -10,9 +10,6 @@ function updateInfoFilms(dataFilm) {
         else if (key === 'poster_path' && dataFilm[key] && !dataFilm[key].includes('https://')) {
             dataFilm[key] = 'https://image.tmdb.org/t/p/w400'+dataFilm[key];
         }
-        else if (key === 'poster_path' && !dataFilm[key]) {
-            
-        }
         else if (!dataFilm[key] && ((key === 'vote_count') || (key === 'vote_average') || (key === 'popularity'))) {
             dataFilm[key] = 0;
         }
