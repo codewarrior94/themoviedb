@@ -7,11 +7,12 @@ const localStg = new LocalStorage;
 
 
 refs.closeInfoBtn.addEventListener('click', onCloseInfoFilm);
+
 function onCloseInfoFilm(ev) {
     ev.stopPropagation();
     if (ev.code === 'Escape'
-            || ev.target.classList.contains('backdrop')
-            || ev.target.classList.contains('icon')) {
+        || ev.target.classList.contains('backdrop')
+        || ev.target.classList.contains('icon')) {
         onToggleClass()
         refs.infoFilmContainer.innerHTML = '';
         document.removeEventListener('keydown', onEventKey);

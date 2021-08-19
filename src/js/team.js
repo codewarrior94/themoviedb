@@ -1,6 +1,6 @@
 export const team = [
   {
-    image: '../images/team/sabina.jpg',
+    image: '../images/team/сабина.jpg',
     name: 'Sabina Abdulalieva',
     linkedin: 'https://www.linkedin.com/in/sabi-abdulalieva-1329a0139',
     git: 'https://github.com/Sabinka1207',
@@ -31,6 +31,6 @@ export const team = [
     image: '../images/team/tatiana.jpg',
     name: 'Tetiana Hrytsenko',
     linkedin: 'https://www.linkedin.com/in/sabi-abdulalieva-1329a0139',
-    git: 'https://github.com/Sabinka1207',
+    git: 'https://github.com/twasileva',
   },
 ]

@@ -1,13 +1,12 @@
-import { team } from './team'
-import teamTemplate from '../templates/teamTemplate.hbs'
-
-const modalList = document.querySelector('.modal-list')
+// import teamTemplate from '../templates/teamTemplate.hbs'
 
 
-function renderTeamModal() {
-  const dataRender = team.map(teamTemplate).join(' ')
-  modalList.innerHTML = dataRender
-}
+// const modalList = document.querySelector('.modal')
+// const btnModal = document.querySelector('.footer__link')
+// console.log(btnModal);
+// btnModal.addEventListener('click', onRenderTeam)
 
-renderTeamModal()
-
+// function onRenderTeam(e) {
+//   e.preventDefault()
+//   modalList.innerHTML = teamTemplate()
+// }
