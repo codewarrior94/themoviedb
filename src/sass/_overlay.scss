@@ -1,0 +1,42 @@
+.poster-thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.overlay-container {
+  font-size: 18px;
+  line-height: 1.56;
+
+  color: var(--color-bgc-white);
+  background-color: var(--color-bgc-backdrop);
+  height: 45px;
+
+  padding: 10px 15px;
+
+  position: absolute;
+
+  transform: translatey(0);
+  transition: transform var(--delay) var(--fun-transition);
+
+  cursor: pointer;
+}
+
+.poster-thumb:hover .overlay-container,
+.poster-thumb:focus .overlay-container {
+  transform: translatey(-100%) scale(1.03);
+}
+
+.poster-thumb:hover,
+.poster-thumb:focus {
+  transform: scale(1.03);
+}
+
+.poster-thumb:hover .film-poster,
+.poster-thumb:focus .film-poster {
+  transform: scale(1.03);
+}
+
+.film-poster {
+  transition: transform var(--delay) var(--fun-transition);
+}

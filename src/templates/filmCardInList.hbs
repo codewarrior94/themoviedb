@@ -1,23 +1,23 @@
 <li class="film-card">
     {{!-- <img class="film-poster" data-id={{id}} src="https://image.tmdb.org/t/p/w300{{poster_path}}"> --}}
-    <img class="film-poster {{poster_class}}" 
-        loading="lazy" 
-        data-film='{"id": "{{id}}",
-                    "original_title":"{{original_name}}{{original_title}}",
-                    "poster_path":"{{poster_path}}",
-                    "genre_ids":"{{genre_ids}}",
-                    "release_date":"{{release_date}}{{first_air_date}}",
-                    "vote_average": "{{vote_average}}",
-                    "popularity": "{{popularity}}",
-                    "genres": "{{genre_ids}}",
-                    "overview": "{{overview}}",
-                    "adult":"{{adult}}"}' 
-        data-title="{{original_name}}{{original_title}}"
-        src="{{poster_path}}" />
+    <div class="poster-thumb">
+        <img class="film-poster {{poster_class}}" loading="lazy" data-film='{"id": "{{id}}",
+                        "original_title":"{{original_name}}{{original_title}}",
+                        "poster_path":"{{poster_path}}",
+                        "genre_ids":"{{genre_ids}}",
+                        "release_date":"{{release_date}}{{first_air_date}}",
+                        "vote_average": "{{vote_average}}",
+                        "popularity": "{{popularity}}",
+                        "genres": "{{genre_ids}}",
+                        "overview": "{{overview}}",
+                        "adult":"{{adult}}"}' data-title="{{original_name}}{{original_title}}" src="{{poster_path}}" />
+        <div class="overlay-container">
+            <span class="vote_average">&#10026; {{vote_average}}</span>
+        </div>
+    </div>
     <p class="film-title">{{original_title}}{{original_name}}</p>
     <div class="film-descr">
         <span class="hilm-genre">{{genre_ids}}</span>
         <span class="hilm-year"> | {{release_date}}{{first_air_date}}</span>
     </div>
 </li>
-
