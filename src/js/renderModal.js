@@ -19,17 +19,15 @@ export default function renderModal(film={}, filmDataLoS='') {
     if (err || filmDataLS.adult === '') {
         data = updateDelInfoFilms(filmDataLS)
     }
-    data = updateInfoFilms(data)
-    console.log(data);
-    console.log(filmDataLoS);
+    data = updateInfoFilms(data);
     refs.infoFilmContainer.insertAdjacentHTML('beforeend', detailFilm(data));
 
-    if (err  || filmDataLS.adult === '') {
+    /*if (err  || filmDataLS.adult === '') {
         disabledBtn();
         Notiflix.Report.failure('Oops, something went wrong!!!',
             `${errMesage} <br><br>- Sory!!!`,
             'Click');
-    }
+    }*/
     if (!refs.infoFilmIsOpen.classList.contains("backdrop--is-hidden") && !err) {
         localStg.changeDataBtn(data.id);
         localStg.eventWatchedQueueBtn(filmDataLoS)

@@ -1,6 +1,8 @@
 import getRefs from './get-refs';
 import onInfoFilmAPI from './infoFilm';
 import LocalStorage from './localStorageMovies';
+import {showWathched, showQueue, isWatched, isQueue} from './localStorageExport';
+
 
 const refs = getRefs();
 const localStg = new LocalStorage;
@@ -17,6 +19,12 @@ function onCloseInfoFilm(ev) {
         refs.infoFilmContainer.innerHTML = '';
         document.removeEventListener('keydown', onEventKey);
         localStg.removeEvent();
+        if (isWatched) {
+            showWathched();
+        }
+        else if (isQueue) {
+            showQueue()
+        }
     }
 }
 
