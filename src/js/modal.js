@@ -1,4 +1,4 @@
-import getRefs from './get-refs';
+import getRefs from './getRefs';
 import onInfoFilmAPI from './infoFilm';
 import LocalStorage from './localStorageMovies';
 import {showWathched, showQueue, isWatched, isQueue} from './localStorageExport';

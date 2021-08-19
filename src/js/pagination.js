@@ -6,18 +6,6 @@ const loadFirstBtn = document.querySelector('.load-first');
 let currentPage = parseInt(localStorage.getItem("current-page"), 10);
 let totalPages = parseInt(localStorage.getItem("total-pages"), 10);
 
-// if (`${currentPage}` > 1 || `${currentPage}` <= `${totalPages}`) {
-//   loadPrevBtn.style.disabled = false;
-// } else {
-//   loadPrevBtn.style.disabled = true;
-// }
-
-// if (`${currentPage}` >= 1 && `${currentPage}` < `${totalPages}`) {
-//   loadNextBtn.disabled = false;
-// } else {
-//   loadNextBtn.disabled = true;
-// }
-
 async function onLoadNext() {
   Notiflix.Loading.remove();
   filmAPI.nextPage();
@@ -30,8 +18,6 @@ async function onLoadNext() {
   } else {
     render(nextPage.data.results);
   }
-  console.log("currentPage " + currentPage);
-  console.log("totalPages " + totalPages);
   Notiflix.Loading.remove();
 }
 async function onLoadPrev() {
@@ -42,8 +28,6 @@ async function onLoadPrev() {
   localStorage.setItem("current-page", `${prevPage.data.page}`);
   currentPage = parseInt(localStorage.getItem("current-page"), 10);
   render(prevPage.data.results);
-  console.log("currentPage " + currentPage);
-  console.log("totalPages " + totalPages);
   Notiflix.Loading.remove();
 }
 

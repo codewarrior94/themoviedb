@@ -69,7 +69,6 @@ function getCurrentPage() {
     loadPrevBtn.classList.add('disabled');
   } else if (currentPage === 1) {
     loadPrevBtn.classList.add('disabled');
-    console.log(totalPages);
   } return currentPage;
 }
 

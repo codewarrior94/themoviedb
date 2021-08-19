@@ -2,8 +2,6 @@ import FilmAPI from './filmAPI'
 import render from './render';
 import Notiflix from 'notiflix';
 
-// import { getCurrentPage, onLoadNextTrendings, onLoadPrevTrendings, onLoadFirstTrendings, onLoadLastTrendings } from './pagination';
-
 const filmAPI = new FilmAPI;
 const loadNextBtn = document.querySelector('.next');
 const loadPrevBtn = document.querySelector('.prev');
@@ -21,7 +19,6 @@ filmAPI.searchTrendings().then(r => {
   loadFirstBtn.addEventListener('click', onLoadFirstTrendings);
   loadLastBtn.addEventListener('click', onLoadLastTrendings);
   render(r.data.results);
-  console.log(r.data);
   getCurrentPage();
 })
 
@@ -35,7 +32,6 @@ function getCurrentPage() {
   } else if (currentPage === totalPages) {
     loadNextBtn.classList.add('disabled');
     loadPrevBtn.classList.remove('disabled');
-    console.log(totalPages);
   } return currentPage;
 }
 

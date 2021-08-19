@@ -1,5 +1,5 @@
 import filmCardInList from "../templates/filmCardInList.hbs";
-import getRefs from "./get-refs";
+import getRefs from "./getRefs";
 //Vika
 import headerLibrary from '../templates/headerLibrary.hbs';
 //Vika
