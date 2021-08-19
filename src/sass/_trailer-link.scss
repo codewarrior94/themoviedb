@@ -1,0 +1,25 @@
+.trailer-link {
+  position: absolute;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.666);
+  color: black;
+  padding: 3px 8px;
+  margin-top: 6px;
+  margin-left: 6px;
+  border-radius: 5px;
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  border: 1px solid var(--color-text-black);
+  cursor: pointer;
+  transition: background-color var(--delay) var(--fun-transition),
+    color var(--delay) var(--fun-transition), border var(--delay) var(--fun-transition);
+
+  &:hover {
+    background-color: var(--color-bgc-orange);
+    color: var(--color-bgc-white);
+    border: 1px solid var(--color-bgc-white);
+  }
+}

@@ -10,3 +10,4 @@ import './js/localStorageExport'
 import './js/themeswitcher';
 import './js/renderModal';
 import './js/up2top';
+import './js/trailers';
