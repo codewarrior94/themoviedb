@@ -1,4 +1,4 @@
-import getRefs from './get-refs';
+import getRefs from './getRefs';
 
 const refs = getRefs();
 refs.mainContainer.addEventListener('click', createLink)
