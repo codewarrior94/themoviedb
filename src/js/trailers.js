@@ -10,19 +10,16 @@ function createLink(e) {
    link.setAttribute("class", 'trailer-link');
    link.setAttribute("target", '_blank');
    link.innerHTML = 'watch trailer';
-   console.log(film)
+
    if (e.target.classList.contains('film-poster')) {
       const idFilm = JSON.parse(film).id;
-      console.log("~ idFilm", idFilm)
       
       const KEY = '64d8aa762e5eca1f8be6b3971b76ddad'
       const URL = `https://api.themoviedb.org/3/movie/${idFilm}/videos?api_key=${KEY}&language=en-US`;
       fetch(URL)
          .then(response => response.json())
          .then(data => {
-            console.log("~ data", data)
             const id = data.results[0].key;
-            console.log("~ id", id)
             link.setAttribute("href",`https://www.youtube.com/watch?v=${id}`);
       })
    }
