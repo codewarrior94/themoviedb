@@ -61,6 +61,35 @@ body.dark-theme {
   }
 }
 
+.page__wrapper.dark-theme {
+  .load-button {
+    background-color: transparent;
+    border: 1px solid white;
+    transition: background-color, 3s, ease-out, 1s;
+    color: white;
+  }
+
+  .load-button:hover {
+    color: black;
+    background-color: var(--color-bgc-orange);
+    fill: var(--color-bgc-white);
+    outline: var(--color-bgc-white);
+    border: 1px solid var(--color-bgc-orange);
+  }
+
+  .load-button.current {
+    color: var(--color-bgc-white);
+    background-color: var(--color-bgc-orange);
+    border: 1px solid var(--color-bgc-orange);
+  }
+
+  .load-button.next.disabled,
+  .load-button.prev.disabled {
+    pointer-events: none;
+    border: transparent;
+  }
+}
+
 .toolbar {
   display: flex;
   justify-content: flex-end;
