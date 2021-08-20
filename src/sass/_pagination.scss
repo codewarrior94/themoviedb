@@ -60,13 +60,8 @@
   outline: var(--color-bgc-white);
 }
 
-.load-button.next,
-.load-button.prev {
-  background-color: #F7F7F7;
-}
-
 .load-button.current {
-  color: var(--color-bgc-white);
+  color: currentColor;
   background-color: var(--color-bgc-orange);
   cursor: not-allowed;
 }
