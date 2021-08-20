@@ -114,4 +114,4 @@ const e=document.querySelector(".arrowup");document.addEventListener("DOMContent
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/container"),require("./js/infoFilm"),require("./js/modal"),require("./js/headerSwitcher"),require("./js/searchFilm"),require("./js/localStorageMovies"),require("./js/localStorageExport"),require("./js/themeswitcher"),require("./js/renderModal"),require("./js/up2top"),require("./js/trailers"),require("./js/team");
 },{"./sass/main.scss":"clu1","./js/container":"Yq98","./js/infoFilm":"kIDH","./js/modal":"RSqK","./js/headerSwitcher":"UKEW","./js/searchFilm":"Td8I","./js/localStorageMovies":"LI6t","./js/localStorageExport":"gDnW","./js/themeswitcher":"xEYp","./js/renderModal":"TqZv","./js/up2top":"wYfV","./js/trailers":"aFca","./js/team":"ZxpD"}]},{},["Focm"], null)
-//# sourceMappingURL=/themoviedb/src.8283131e.js.map
+//# sourceMappingURL=/themoviedb/src.6fd918f8.js.map
