@@ -11,8 +11,6 @@ const loadLastBtn = document.querySelector('.last');
 const loadFirstBtn = document.querySelector('.first');
 const loadCurrentBtn = document.querySelector('.current');
 
-
-
 const refs = {
   searchForm: document.getElementById('search-form'),
   searchFilm: document.querySelector('.search-form__input'),
@@ -115,7 +113,6 @@ async function onLoadLastSearch() {
   totalPages = parseInt(localStorage.getItem("total-pages"), 10);
   const lastPage = await filmAPI.searchByKeywordPagination(totalPages);
   render(lastPage.data.results);
-  loadPrevBtn.classList.remove('disabled');
   toTop();
   Notiflix.Loading.remove();
 }

@@ -10,6 +10,12 @@ let isWatched = false;
 let isQueue = false;
 //Vika
 const wrapper = document.querySelector('.header');
+const libraryBtn = document.getElementById('libraryBtn');
+const pageWrapper = document.querySelector('.page__wrapper');
+libraryBtn.addEventListener('click', hidePagination);
+function hidePagination() {
+  pageWrapper.classList.add('unvisible')
+}
 //Vika
 
 getRefs().myLibBtn.addEventListener("click", onMyLibClick)

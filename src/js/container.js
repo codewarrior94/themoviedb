@@ -43,6 +43,7 @@ async function onLoadNextTrendings() {
   getCurrentPage();
   render(nextPage.data.results);
   loadPrevBtn.classList.remove('disabled');
+  toTop();
   Notiflix.Loading.remove();
 }
 
@@ -54,6 +55,7 @@ async function onLoadPrevTrendings() {
   getCurrentPage();
   render(prevPage.data.results);
   loadNextBtn.classList.remove('disabled');
+  toTop();
   Notiflix.Loading.remove();
 }
 
@@ -64,6 +66,7 @@ async function onLoadFirstTrendings() {
   localStorage.setItem("current-page", `${firstPage.data.page}`);
   getCurrentPage();
   render(firstPage.data.results);
+  toTop();
   Notiflix.Loading.remove();
 }
 
@@ -74,5 +77,13 @@ async function onLoadLastTrendings() {
   totalPages = parseInt(localStorage.getItem("total-pages"), 10);
   const lastPage = await filmAPI.searchTrendingsPagination(totalPages);
   render(lastPage.data.results);
+  toTop();
   Notiflix.Loading.remove();
+}
+
+function toTop() {
+  window.scrollBy({
+      top: -window.pageYOffset,
+      behavior: 'smooth',
+    });
 }

@@ -1,6 +1,7 @@
 .page__anchor {
   text-decoration: none;
 }
+
 .page__wrapper {
   background-color: transparent;
   width: 280px;
@@ -18,8 +19,15 @@
   }
 }
 
+.page__wrapper.unvisible {
+  .load-button {
+    display: none;
+  }
+}
+
 .pagе__container {
   display: flex;
+
 }
 
 .load-button {
@@ -54,25 +62,19 @@
 
 .load-button.next,
 .load-button.prev {
-  background-color: #f7f7f7;
+  background-color: #F7F7F7;
 }
 
 .load-button.current {
   color: var(--color-bgc-white);
   background-color: var(--color-bgc-orange);
+  cursor: not-allowed;
 }
 
 .icon__container {
   width: 16px;
   height: 16px;
-  background-image: url('../images/svg/arrow-left.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.icon__container.next {
   border-radius: 5px;
-  background-image: url('../images/svg/arrow-right.svg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -80,7 +82,17 @@
 .load-button.next.disabled,
 .load-button.prev.disabled {
   pointer-events: none;
-  background-color: rgba(0, 0, 0, 0.56);
+  cursor: not-allowed;
+  border: none;
+  outline: none;
+  background-color: rgba(112, 106, 106, 0.836);
+  color: rgba(214, 207, 202, 0.705);
+  fill: rgba(112, 106, 106, 0.836);
+  background-color: rgb(122, 122, 122);
   color: rgba(214, 207, 202, 0.705);
   fill: rgba(214, 207, 202, 0.705);
+}
+
+.library-wrapper .page__wrapper {
+  display: none;
 }
